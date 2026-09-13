@@ -1,23 +1,38 @@
-import Link from 'next/link';
 export default function Home() {
   return (
-    <main>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
-        <div className="mx-auto max-w-7xl flex h-16 items-center justify-between px-6">
-          <div className="font-black tracking-tight text-xl">VENDIX</div>
-          <nav className="hidden md:flex gap-6 text-sm text-zinc-400"><a href="#features">Features</a><a href="#pricing">Precios</a></nav>
-          <div className="flex gap-3"><Link href="/login" className="px-4 py-2 text-sm">Login</Link><Link href="/dashboard" className="rounded-full bg-violet-600 px-5 py-2 text-sm font-medium">Probar gratis</Link></div>
+    <div style={{ background: '#0a0a0a', color: 'white', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0' }}>
+          <div style={{ fontWeight: 900, fontSize: '24px' }}>VENDIX</div>
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <a href="#features" style={{ color: '#aaa', textDecoration: 'none' }}>Features</a>
+            <a href="#precios" style={{ color: '#aaa', textDecoration: 'none' }}>Precios</a>
+            <a href="/login" style={{ color: 'white', textDecoration: 'none', border: '1px solid #333', padding: '8px 16px', borderRadius: '8px' }}>Login</a>
+          </div>
         </div>
-      </header>
-      <section className="mx-auto max-w-7xl px-6 py-24 grid md:grid-cols-2 gap-12">
-        <div>
-          <span className="inline-flex rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-xs text-violet-300">Nuevo: IA para ecommerce</span>
-          <h1 className="mt-6 text-5xl font-black leading-[0.9] tracking-tight">VENDIX<br/>Haz una foto.<br/><span className="text-violet-400">Vende más.</span></h1>
-          <p className="mt-6 text-lg text-zinc-400">Convierte las fotos de tus productos en contenido profesional con inteligencia artificial.</p>
-          <div className="mt-8 flex gap-3"><Link href="/dashboard/products/new" className="rounded-full bg-white text-black px-6 py-3 font-medium">Probar gratis</Link><Link href="/pricing" className="rounded-full border border-white/20 px-6 py-3">Ver planes</Link></div>
+
+        <div style={{ textAlign: 'center', padding: '80px 20px' }}>
+          <div style={{ display: 'inline-block', background: '#1a1a1a', border: '1px solid #333', padding: '8px 16px', borderRadius: '20px', fontSize: '14px' }}>
+            Nuevo: IA para ecommerce
+          </div>
+          <h1 style={{ fontSize: '64px', fontWeight: 900, lineHeight: 1, margin: '20px 0' }}>
+            Haz una foto.<br/>Vende más.
+          </h1>
+          <p style={{ color: '#999', fontSize: '18px', maxWidth: '600px', margin: '20px auto' }}>
+            Convierte las fotos de tus productos en contenido profesional con Inteligencia artificial.
+          </p>
+          <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', marginTop: '30px' }}>
+            <a href="/login" style={{ background: 'linear-gradient(90deg, #8b5cf6, #ec4899)', color: 'white', padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontWeight: 700 }}>Probar gratis</a>
+            <a href="#precios" style={{ background: '#1a1a1a', color: 'white', padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', border: '1px solid #333' }}>Ver planes</a>
+          </div>
         </div>
-        <div className="relative rounded-[2rem] border border-white/10 bg-gradient-to-br from-zinc-900 to-zinc-800 p-6">Mock before/after - ver artefacto completo</div>
-      </section>
-    </main>
+
+        <div id="precios" style={{ textAlign: 'center', padding: '40px' }}>
+          <a href="https://www.paypal.com/paypalme/fransineros" target="_blank" style={{ background: 'white', color: 'black', padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontWeight: 700, display: 'inline-block' }}>
+            Pagar con PayPal - fransineros@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
   )
 }
