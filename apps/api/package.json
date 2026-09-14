@@ -2,9 +2,10 @@
   "name": "@vendix/api",
   "version": "0.2.0",
   "scripts": {
-    "start:dev": "nest start --watch",
-"start": "nest start",
-"build": "nest build",    
+"start:dev": "npx @nestjs/cli start --watch",
+"start": "npx @nestjs/cli start",
+"build": "npx @nestjs/cli build",
+   
     
     "seed": "ts-node prisma/seed.ts"
   },
