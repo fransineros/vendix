@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
+  "compilerOptions"noEmitOnError": false: {
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
