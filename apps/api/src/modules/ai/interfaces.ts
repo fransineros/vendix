@@ -12,10 +12,10 @@ export interface AIContentGenerator {
   generateTitle(analysis: any): Promise<string>;
   generateDescription(analysis: any, title: string): Promise<string>;
   generateHashtags(analysis: any, title: string): Promise<string[]>;
-  generateCommercialContent(analysis: any, title: string, description: string): Promise<string>;
+  generateCommercialContent(analysis: any, title: string, description: string): Promise<any>;
 }
 
 export interface AIImageProcessor {
-  removeBackground(imageUrl: string): Promise<{ processedUrl: string; thumbnailUrl: string }>;
-  enhanceImage(imageUrl: string): Promise<{ processedUrl: string }>;
+  removeBackground(imageUrl: string): Promise<any>;
+  enhanceImage(imageUrl: string): Promise<any>;
 }
