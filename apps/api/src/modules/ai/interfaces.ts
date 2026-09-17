@@ -1,21 +1,15 @@
 export interface AIProductAnalyzer {
-  analyze(imageUrl: string): Promise<{
-    category: string;
-    brand?: string;
-    colors: string[];
-    attributes: Record<string, string>;
-    confidence: number;
-  }>;
+  analyze(imageUrl: string): Promise<any>;
 }
 
 export interface AIContentGenerator {
-  generateTitle(analysis: any): Promise<string>;
-  generateDescription(analysis: any, title: string): Promise<string>;
-  generateHashtags(analysis: any, title: string): Promise<string[]>;
-  generateCommercialContent(analysis: any, title: string, description: string): Promise<string>;
+  generateTitle(analysis: any): Promise<any>;
+  generateDescription(analysis: any, title: string): Promise<any>;
+  generateHashtags(analysis: any, title: string): Promise<any>;
+  generateCommercialContent(analysis: any, title: string, description: string): Promise<any>;
 }
 
 export interface AIImageProcessor {
-  removeBackground(imageUrl: string): Promise<{ processedUrl: string; thumbnailUrl: string }>;
-  enhanceImage(imageUrl: string): Promise<{ processedUrl: string }>;
+  removeBackground(imageUrl: string): Promise<any>;
+  enhanceImage(imageUrl: string): Promise<any>;
 }
