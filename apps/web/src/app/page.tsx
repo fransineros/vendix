@@ -7,7 +7,7 @@ export default function Home() {
           <div style={{ display: 'flex', gap: '20px' }}>
             <a href="#features" style={{ color: '#aaa', textDecoration: 'none' }}>Features</a>
             <a href="#precios" style={{ color: '#aaa', textDecoration: 'none' }}>Precios</a>
-            <a href="/login" style={{ color: 'white', textDecoration: 'none', border: '1px solid #333', padding: '8px 16px', borderRadius: '8px' }}>Login</a>
+            <a href="/dashboard" style={{ color: 'white', textDecoration: 'none', border: '1px solid #333', padding: '8px 16px', borderRadius: '8px' }}>Login</a>
           </div>
         </div>
 
@@ -22,7 +22,7 @@ export default function Home() {
             Convierte las fotos de tus productos en contenido profesional con Inteligencia artificial.
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', marginTop: '30px' }}>
-            <a href="/login" style={{ background: 'linear-gradient(90deg, #8b5cf6, #ec4899)', color: 'white', padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontWeight: 700 }}>Probar gratis</a>
+            <a href="/dashboard" style={{ background: 'linear-gradient(90deg, #8b5cf6, #ec4899)', color: 'white', padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontWeight: 700 }}>Probar gratis</a>
             <a href="#precios" style={{ background: '#1a1a1a', color: 'white', padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', border: '1px solid #333' }}>Ver planes</a>
           </div>
         </div>
