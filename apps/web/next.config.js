@@ -20,10 +20,7 @@ const nextConfig = {
       'onnxruntime-web': false,
       'onnxruntime-common': false,
     };
-    config.module = {
-      ...config.module,
-      exprContextCritical: false,
-    };
+    config.module = { ...config.module, exprContextCritical: false };
     config.module.rules.push({
       test: /ort\.node.*\.mjs$/,
       type: 'javascript/auto',
