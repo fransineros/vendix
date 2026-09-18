@@ -4,8 +4,8 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   transpilePackages: ['@imgly/background-removal'],
-  webpack: (config, { isServer }) => {
-    config.resolve.fallback = { ...config.resolve.fallback, fs: false, path: false },
+  webpack: (config) => {
+    config.resolve.fallback = { ...config.resolve.fallback, fs: false, path: false };
     config.plugins = [
       ...config.plugins,
       new webpack.IgnorePlugin({ resourceRegExp: /^onnxruntime-node$/ }),
