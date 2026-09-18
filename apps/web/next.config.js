@@ -3,13 +3,12 @@ const webpack = require('webpack');
 const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  transpilePackages: [],
+  transpilePackages: ['@imgly/background-removal'],
   webpack: (config, { isServer }) => {
-    config.resolve.fallback = { ...config.resolve.fallback, fs: false, path: false, module: false, crypto: false, stream: false, os: false };
+    config.resolve.fallback = { ...config.resolve.fallback, fs: false, path: false },
     config.plugins = [
       ...config.plugins,
       new webpack.IgnorePlugin({ resourceRegExp: /^onnxruntime-node$/ }),
-      new webpack.IgnorePlugin({ resourceRegExp: /^@imgly\/background-removal/ }),
       new webpack.IgnorePlugin({ resourceRegExp: /^sharp$/ }),
     ];
     config.module.exprContextCritical = false;
@@ -18,7 +17,6 @@ const nextConfig = {
   },
   experimental: {
     esmExternals: 'loose',
-    serverComponentsExternalPackages: ['onnxruntime-node', 'sharp', '@imgly/background-removal-node', '@imgly/background-removal', 'onnxruntime-web'],
   },
 }
 module.exports = nextConfig
